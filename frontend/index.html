@@ -1,313 +1,535 @@
 <!DOCTYPE html>
-<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-
-   <!--- Basic Page Needs
-   ================================================== -->
-   <meta charset="utf-8">
-	<title>Himanshu Bansal's Resume</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-   <!-- Mobile Specific Metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- CSS
-    ================================================== -->
-   <link rel="stylesheet" href="css/default.css">
-	<link rel="stylesheet" href="css/layout.css">
-   <link rel="stylesheet" href="css/media-queries.css">
-   <link rel="stylesheet" href="css/magnific-popup.css">
-
-   <!-- Script
-   ================================================== -->
-   <script src="js/modernizr.js"></script>
-   <script src="main.js"></script>
-
-   <!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="favicon.png" >
-
-</head>
-
-<body>
-
-   <!-- Header
-   ================================================== -->
-   <header id="home">
-
-      <nav id="nav-wrap">
-
-         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-
-         <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-            <li><a class="smoothscroll" href="#about">About</a></li>
-	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
-         </ul> <!-- end #nav -->
-
-      </nav> <!-- end #nav-wrap -->
-
-      <div class="row banner">
-         <div class="banner-text">
-            <h1 class="responsive-headline">YO Bitches!, It's Himanshu Bansal</h1>
-            
-            <p>and this page has been viewed by <a id="counter"></a> mfs :) </p> 
-            <ul class="social">
-               <!-- <li><a href="https://twitter.com/madebygps"><i class="fa fa-twitter"></i></a></li> -->
-               <!-- <li><a href="https://madebygps.com"><i class="fa fa-external-link"></i></a></li> -->
-               <li><a href="https://www.linkedin.com/in/himanshu-bansal-b15204200/"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="https://instagram.com/mr._bansal_02"><i class="fa fa-instagram"></i></a></li>
-               <li><a href="https://leetcode.com/bansalji_code/"><i class="fa fa-youtube"></i></a></li>
-               <li><a href="https://github.com/bansalji02"><i class="fa fa-github"></i></a></li>
-            </ul>
-         </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/cool face.jpg" type="image/x-icon" />
+    <title>Himanshu's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Himanshu Bansal</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-
-      <p class="scrolldown">
-         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
-      </p>
-
-   </header> <!-- Header End -->
-
-
-   <!-- About Section
-   ================================================== -->
-   <section id="about">
-
-      <div class="row">
-
-         <div class="three columns">
-
-            <img class="profile-pic"  src="images/Himanshu_picture.png" alt="" />
-
-         </div>
-
-         <div class="nine columns main-col">
-
-            <h2>ABOUT ME</h2>
-
-            <p> Hi, I'm Himanshu Bansal, Enthusiastic and driven Computer Science graduate with a solid foundation in
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">John Doe</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/Himanshu_picture.png" alt="Himanshu bansal profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Himanshu Bansal</h1>
+        <p class="section__text__p2">Software Engineer/Cloud And DevOps Enthusiast</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/HimanshuCv.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Contact Info
+          </button>
+        </div>
+        <p class="section__text__p1">This page is viewed by <a id="counter"></a> awesome people!</p>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/in/himanshubansalhere'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/bansalji02'"
+          />
+          
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/cool face.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+               <img
+                 src="./assets/education.png"
+                 alt="Education icon"
+                 class="icon"
+               />
+               <h3>Education</h3>
+               <p>B.Tech Computer Science and Engineering <br/> Punjabi University, Patiala</p>
+             </div>
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>Application Developer Intern <br />GDSC Co-Lead </p>
+            </div>
+            
+          </div>
+          <div class="text-container">
+            <p>
+               Hi, I'm Himanshu Bansal, Enthusiastic and driven Computer Science graduate with a solid foundation in
                cloud technologies, DevOps practices, and proficient programming skills.
                Eager to apply academic knowledge and hands-on experience to contribute
                effectively in a dynamic environment. Adept at leveraging cloud resources
                and implementing DevOps methodologies to enhance software development
                processes and deliver high-quality solutions.
-               Hehe, I am the master Bitches!
-         </br>
-      </br>
-       I built this page as part of the <span><a href="https://github.com/madebygps/cgc-azure-resume">Cloud Guru Azure Resume Challenge.</a></span>
-            
-
-         </div> <!-- end .main-col -->
-
+            </p>
+          </div>
+        </div>
       </div>
-
-   </section> <!-- About Section End-->
-
-
-   <!-- Resume Section
-   ================================================== -->
-   <section id="resume">
-
-      <!-- Education
-      ----------------------------------------------- -->
-      <div class="row education">
-
-         <div class="three columns header-col">
-            <h1><span>Certifications</span></h1>
-         </div>
-
-         <div class="nine columns main-col">
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>AWS Certified Cloud Practitioner- KodeKloud</h3>
-                  <p class="info"><em class="date">2023</em></p>
-
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Tools and Technologies</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                 
+                </div>
+              </article>
+              <article>
+               <img
+                 src="./assets/checkmark.png"
+                 alt="Experience icon"
+                 class="icon"
+               />
+               <div>
+                 <h3>Python</h3>
                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>Kubernetes for absolute Beginners - KodeKloud</h3>
-                  <p class="info"><em class="date">July 2023</em></p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>Docker Training for beginners - KodeKloud</h3>
-                  <p class="info"><em class="date">June 2023</em></p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-         </div> <!-- main-col end -->
-
-      </div> <!-- End Education -->
-
-
-      <!-- Work
-      ----------------------------------------------- -->
-      <div class="row work">
-
-         <div class="three columns header-col">
-            <h1><span>Work</span></h1>
-         </div>
-
-         <div class="nine columns main-col">
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>AppSynergies Pvt.Ltd</h3>
-                  <p class="info">Applicatioin Developer Intern<span>&bull;</span> <em class="date">June 2022 - September 2022</em></p>
-
-                  <p>
-                  <li>• Worked on a live app with more than 70k downloads!</li> 
-                  <li>• Learned and followed agile and DevOps methodologies.</li> 
-                  <li>• Created a system to monitor user statistics which decreased
-                     human intervention by 80% </li>   
-                  <li>• Integrated an automated payments system using Razorpay that
-                     eradicated the need to manually verify purchases by 100%</li>       
-                  </p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>Google Developers Student Club</h3>
-                  <p class="info">Co-Lead<span>&bull;</span> <em class="date">May 2022 - August 2023</em></p>
-
-                  <p>
-                     <li>Organised various events in University</li>
-                     <li>Mentored junior Students in the fields of development, Cloud and Programming</li>
-                     <li>Part of Core Decision making team</li>
-                  </p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-            <!-- <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>Powwr | A Cognitive Energy Company</h3>
-                  <p class="info">System Administrator <span>&bull;</span> <em class="date">September 2018 - May 2019</em></p>
-
-                  <p>
-                  <li>Atlassian suite administration</li>
-                  <li>O365 suite administration</li>
-                  <li>SQL server 2019 administration</li>
-                  <li>Azure infrastructure administration</li>
-                  </p>
-
-               </div>
-
-            </div> item end -->
-
-            <!-- <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>Tech Boston</h3>
-                  <p class="info">Help Desk Analyst <span>&bull;</span> <em class="date">October 2016 - August 2018</em></p>
-
-                  <p>
-                  <li>Front line help desk IT support</li>
-                  </p>
-
-               </div>
-
-            </div> item end -->
-
-            <!-- <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>Apple Danbury</h3>
-                  <p class="info">Mobile tech <span>&bull;</span> <em class="date">December 2014 - August 2016</em></p>
-
-                  <p>
-                  <li>Repaired software and hardware issues related to iOS devices</li>
+             </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Microsoft Azure</h3>
                   
-                  </p>
-
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Amazon Web Services</h3>
+                  
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML/CSS</h3>
+                  
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Docker</h3>
+                </div>
+              </article>
+              <article>
+               <img
+                 src="./assets/checkmark.png"
+                 alt="Experience icon"
+                 class="icon"
+               />
+               <div>
+                 <h3>Kubernetes</h3>
                </div>
-
-            </div> item end -->
-
-         </div> <!-- main-col end -->
-
-      </div> <!-- End Work -->
-
-
-      
-
-   </section> <!-- Resume Section End-->
-
-
-   <!-- footer
-   ================================================== -->
-   <footer>
-
-      <div class="row">
-
-         <div class="twelve columns">
-
-            <ul class="social-links">
-               <li><a href="https://www.linkedin.com/in/himanshu-bansal-b15204200/"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="https://instagram.com/mr._bansal_02"><i class="fa fa-instagram"></i></a></li>
-               <li><a href="https://leetcode.com/bansalji_code/"><i class="fa fa-youtube"></i></a></li>
-               <li><a href="https://github.com/bansalji02"><i class="fa fa-github"></i></a></li>
-            </ul>
-
-            <ul class="copyright">
-               <a href="https://www.styleshout.com/free-templates/ceevee/"> Template by CeeVee </a>
-                
-            </ul>
-
+             </article>
+             <article>
+               <img
+                 src="./assets/checkmark.png"
+                 alt="Experience icon"
+                 class="icon"
+               />
+               <div>
+                 <h3>Git/Github</h3>
+               </div>
+             </article>
+             <article>
+               <img
+                 src="./assets/checkmark.png"
+                 alt="Experience icon"
+                 class="icon"
+               />
+               <div>
+                 <h3>CI/CD</h3>
+               </div>
+             </article>
+             <article>
+               <img
+                 src="./assets/checkmark.png"
+                 alt="Experience icon"
+                 class="icon"
+               />
+               <div>
+                 <h3>Docker</h3>
+               </div>
+             </article>
+             <article>
+               <img
+                 src="./assets/checkmark.png"
+                 alt="Experience icon"
+                 class="icon"
+               />
+               <div>
+                 <h3>Flutter</h3>
+               </div>
+            </article>
+               
+            </div>
+          </div>
+          <!-- <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+<!-- this is the container for first project-->
+      <div class="experience-details-container">
+         <div class="about-containers">
+           <div class="details-container color-container">
+              <!-- <div class="article-container">
+               <img
+                 src="./assets/project-1.png"
+                 alt="Project 1"
+                 class="project-img"
+               />
+              </div> -->
+             <h2 class="experience-sub-title project-title">Portfolio Website</h2>
+             <p>An Interactive and Beautiful website that showcases my Skills. This website uses HTML, CSS, Javascipt as Frontend
+                and C# as Backend. It is hosted on Azure App Service. It is also integrated with Github Actions for CI/CD.
+                I have used various tools and services of Azure like Azure App Service, Azure CosmosDB, Azure CDN, etc.
+             </p>
+             <div class="btn-container">
+               <button
+                 class="btn btn-color-2 project-btn"
+                 onclick="location.href='https://github.com/bansalji02/azure-resume'"
+               >
+                 Github
+             </div>
+            </div>
+               
          </div>
-
-         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
-
       </div>
 
-   </footer> <!-- Footer End-->
+<!-- This is the second project -->
+      <div class="experience-details-container">
+         <div class="about-containers">
+           <div class="details-container color-container">
+              <!-- <div class="article-container">
+               <img
+                 src="./assets/project-1.png"
+                 alt="Project 1"
+                 class="project-img"
+               />
+              </div> -->
+             <h2 class="experience-sub-title project-title">Cloud native Monitoring Application</h2>
+             <p>A monitoring app that shows the real-time CPU parameters using Python.
+               Application uses AWS ECS and it is hosted on AWS EKS
+               •Successfully demonstrated working skills in Docker, Kubernetes, AWS
+               Cloud and working with k8s Clusters, Virtual Machines, and other AWS tools.
+             </p>
+             <div class="btn-container">
+               <button
+                 class="btn btn-color-2 project-btn"
+                 onclick="location.href='https://github.com/bansalji02/cloudnative-monitoring-app'"
+               >
+                 Github
+             </div>
+            </div>
+               
+         </div>
+      </div>
 
-   <!-- Java Script
-   ================================================== -->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+<!-- This is the third project
 
-   <script src="js/jquery.flexslider.js"></script>
-   <script src="js/waypoints.js"></script>
-   <script src="js/jquery.fittext.js"></script>
-   <script src="js/magnific-popup.js"></script>
-   <script src="js/init.js"></script>
+      <div class="experience-details-container">
+         <div class="about-containers">
+           <div class="details-container color-container">
+              
+             <h2 class="experience-sub-title project-title">ATTENDEASE</h2>
+             <p>An Attendance application made using Flutter and Firebase. •Aimed at
+               solving the problem of using the traditional methods of pen and paper and
+               doing the work manually. •Enables easy filtering and calculation of various
+               parameters among the records
+             </p>
+             <div class="btn-container">
+               <button
+                 class="btn btn-color-2 project-btn"
+                 onclick="location.href='https://github.com/RidhemGawri/ATTENDEASE'"
+               >
+                 Github
+             </div>
+            </div>
+               
+         </div>
+      </div>
+ -->
 
-</body>
 
+
+
+      <!-- <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+            </div>
+            <h2 class="experience-sub-title project-title">Portfolio Website</h2>
+            <p>An Interactive and Beautiful website that showcases my Skills. This website uses HTML, CSS, Javascipt as Frontend
+               and C# as Backend. It is hosted on Azure App Service. It is also integrated with Github Actions for CI/CD.
+               I have used various tools and services of Azure like Azure App Service, Azure CosmosDB, Azure CDN, etc.
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/bansalji02/azure-resume'"
+              >
+                Github
+              
+            </div>
+          </div> -->
+
+
+
+         
+
+
+
+
+
+          <!-- <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:bansal.worknedu@gmail.com">bansal.worknedu@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/himanshubansalhere">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
